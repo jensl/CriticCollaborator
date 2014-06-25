@@ -1,0 +1,32 @@
+Author = Jens Lindstrom <jl@critic-review.org>
+Description = "Utilities for Critic collaborators.\n\nTo use, first use the set-up interface to create an OAuth access token, then use the \"Push to master\" button on review front-pages to push changes to the GitHub repository."
+
+[Page CriticCollaborator/setup]
+Description = Set-up interface.
+Script = setup.js
+Function = main
+
+[Page CriticCollaborator/createtoken]
+Description = Starts OAuth token creation process.
+Script = createtoken.js
+Function = main
+
+[Page CriticCollaborator/fetchtoken]
+Description = Finishes OAuth token creation process.
+Script = fetchtoken.js
+Function = main
+
+[Page CriticCollaborator/deletetoken]
+Description = Delete OAuth token.
+Script = deletetoken.js
+Function = main
+
+[Page CriticCollaborator/push]
+Description = Push review branch to master.
+Script = push.js
+Function = main
+
+[Inject showreview]
+Description = (Optionally) inject "Push to master" button.
+Script = inject.js
+Function = showreview
